@@ -1,0 +1,68 @@
+<% include partials/header %>
+
+<div class="pt-2 col-12" style="background-color:green;color:white;">
+  <h1 class="text-center">Inventory Insertion Page</h1>
+</div>
+
+<div class="col-12 inline">
+  <div class="p-0">
+
+    <form method="POST" action="/api/inventoryInsert" class="col-12 p-0">
+
+      <!--First Row-->
+
+      <div class="form-row">
+
+        <div class="col-3 mb-3"></div>
+
+        <div class="col-2 mb-3">
+          <label for="itemID">Item ID</label>
+          <input type="text" class="form-control" id="itemID" placeholder="0001110011" name="itemID">
+        </div>
+
+        <div class="col-2 mb-3">
+          <label for="quantity">Quantity</label>
+          <input type="text" class="form-control" id="quantity" placeholder="1000" name="quantity">
+        </div>
+
+        <div class="col-2 mb-3">
+          <label for="in_production" class="text-center col-12">In Production?</label>
+          <input type="text" class="form-control text-center col-12" id="in_production" name="in_production" value="Y">
+        </div>
+
+      </div>
+
+      <!--Second Row-->
+
+      <div class="form-row">
+
+        <div class="col-3 mb-3"></div>
+
+        <div class="col-6 mb-3">
+          <label for="name">Item Name</label>
+          <input type="text" class="form-control col-12" id="name" name="name" placeholder="<Well Marketed Item Name>">
+        </div>
+
+        <div class="col-3 mb-3"></div>
+
+
+      </div>
+
+      <!--Submit Button-->
+
+      <button class="btn offset-3 mt-3" type="submit" name="submitButton" method="POST"
+        action="/api/inventoryInsert" style="background-color:green;color:white;">Submit form</button>
+
+    </form>
+
+    <div class="spacer"></div>
+
+    <div class="offset-3">
+
+
+      <a href="./inventoryStock">View Roster</a>
+      <br>
+      <a href="/">Home</a>
+    </div>
+
+    <% include partials/footer %>
