@@ -1,6 +1,6 @@
-USE
-DROP TABLE
-DROP TABLE  employees;CREATE TABLE employees
+USE business;
+DROP TABLE employees;
+CREATE TABLE employees
              (
                           employeeid         INT NOT NULL auto_increment,
                           first_name         VARCHAR(20),
@@ -13,4 +13,5 @@ DROP TABLE  employees;CREATE TABLE employees
                           city               VARCHAR(30),
                           us_state           VARCHAR(2),
                           employed_currently BOOLEAN DEFAULT true,
+               );
                           desc EMPLOYEES;
