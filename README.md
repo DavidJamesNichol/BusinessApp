@@ -22,16 +22,16 @@ Installation is not necessary.
 CONFIGURATION
 =============
 To access the application, 
-    1 go to https://ide.goorm.io 
-    2 click "Sign In"
-    3 paste "personnot40@gmail.com" into the email box
-    4 paste "Github1!" into password (case sensitive)     
-    5 click "Dashboard" at the top of the screen
-    6 go to "Shared containers(1)" and click "Run"
-    7 click the "Test" button found on the toolbar 
-    8 press the enter key
-    9 then click the "Deploy" button
-    10 finally, visit this url https://david-nichol-app-project.run.goorm.io/
+ * go to https://ide.goorm.io 
+ * click "Sign In"
+ * paste "personnot40@gmail.com" into the email box
+ * paste "Github1!" into password (case sensitive)     
+ * click "Dashboard" at the top of the screen
+ * go to "Shared containers(1)" and click "Run"
+ * click the "Test" button found on the toolbar 
+ * press the enter key
+ * then click the "Deploy" button
+ * finally, visit this url https://david-nichol-app-project.run.goorm.io/
 
 
 
