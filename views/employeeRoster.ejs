@@ -1,0 +1,70 @@
+<% include partials/header %>
+
+<div class="pt-2 col-12" style="background-color:darkblue;color:white;">
+  <h1 class="text-center">Employee Roster Page</h1>
+</div>
+
+<div class="col-12 inline m-0 p-0 overflow-hidden">
+
+  <% query %>
+  <% if(query) { %>
+
+  <table class="table table-hover table-dark col-12">
+
+    <thead>
+      <tr>
+        <th scope="col">EMP ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email Address</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Birthday</th>
+        <th scope="col">SSN</th>
+        <th scope="col">Street Address</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+      </tr>
+    </thead>
+
+    <% for(const i in query[0]) { %>
+
+    <tr>
+      <th scope="row"><%= query[0][i].employeeid %></th>
+      <td><%= query[0][i].first_name %></td>
+      <td><%= query[0][i].last_name %></td>
+      <td><%= query[0][i].email %></td>
+      <td><%= query[0][i].phone %></td>
+      <td><%= query[0][i].birthday %></td>
+      <td><%= query[0][i].ssn %></td>
+      <td><%= query[0][i].street_address %></td>
+      <td><%= query[0][i].city %></td>
+      <td><%= query[0][i].us_state %></td>
+    </tr>
+
+    <% }} %>
+
+  </table>
+
+</div>
+<div class="row col-12">
+<form class="form-inline col-2 offset-2" method="POST" action="/api/employeeRoster/employeeRoster">
+  <button type="submit" class="btn col-12" method="POST" action="/api/employeeRoster/employeeRoster"
+    name="getEmployeeRoster" style="background-color:darkblue;color:white;">Employees by Hire Date</button>
+</form>
+
+<form class="form-inline col-2 offset-4" method="POST" action="/api/employeeRoster/employeeGroupByCity">
+<button type="submit" class="btn col-12" method="POST" action="/api/employeeRoster/employeeGroupByCity"
+    name="getEmployeeRoster" style="background-color:darkblue;color:white;">Employees by Location</button>
+</form>
+</div>
+</div>
+
+<div class="height">
+</div>
+
+<a href="/employeeInsert">Return to Insert</a>
+<br>
+<a href="/">Home</a>
+
+
+<% include partials/footer %>

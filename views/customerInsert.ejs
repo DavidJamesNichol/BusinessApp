@@ -1,0 +1,68 @@
+<% include partials/header %>
+
+<div class="pt-2 col-12" style="background-color:turquoise;color:white;">
+  <h1 class="text-center">Customer Insertion Page</h1>
+</div>
+
+<div class="col-10 offset-1 inline">
+  <div class="px-4">
+
+    <form method="POST" action="/api/customerInsert">
+
+      <div class="form-row">
+
+        <div class="col-md-4 mb-3">
+          <label for="first_name">First name</label>
+          <input type="text" class="form-control" id="cust_f_name" placeholder="Mark" name="cust_f_name">
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label for="last_name">Last name</label>
+          <input type="text" class="form-control" id="cust_l_name" placeholder="Otto" name="cust_l_name">
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="motto@email.com">
+        </div>
+
+      </div>
+
+      <!--Next Row-->
+
+      <div class="form-row">
+
+        <div class="col-md-6 mb-3">
+          <label for="phone">Phone Number</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="(999) 999-9999">
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="birthday">Birthday</label>
+          <input type="text" class="form-control" id="date_of_sale" name="date_of_sale" placeholder="01/01/2000">
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="ssn">Location</label>
+          <input type="text" class="form-control" id="store_location" name="store_location" placeholder="Chicago">
+        </div>
+
+      </div>
+
+      <!--Submit Button-->
+
+      <button class="btn mt-3" type="submit" name="submitButton" method="POST" action="/api/customerInsert"
+        style="background-color:turquoise;color:white;">Submit form</button>
+
+    </form>
+
+    <div class="spacer"></div>
+
+    <a href="./customerList">View Roster</a>
+    <br>
+    <a href="/">Home</a>
+
+  </div>
+</div>
+
+<% include partials/footer %>

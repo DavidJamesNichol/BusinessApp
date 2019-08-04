@@ -1,0 +1,89 @@
+<% include partials/header %>
+
+<div class="pt-2 col-12" style="background-color:fuchsia;color:white;">
+  <h1 class="text-center">Sales Insertion Page</h1>
+</div>
+
+<div class="col-8 offset-2 inline p-0">
+
+    <form method="POST" action="/api/salesInsert">
+
+	  <!--First Row-->
+
+      <div class="form-row">
+
+        <div class="col-4 mb-3">
+          <label for="custID">Cust ID</label>
+          <input type="text" class="form-control" id="custID" placeholder="00000" name="custID">
+        </div>
+		  
+		  <div class="col-4"></div>
+
+        <div class="col-4 mb-3">
+          <label for="empID">Emp ID</label>
+          <input type="text" class="form-control" id="empID" name="empID" placeholder="000000">
+        </div>
+
+
+      </div>
+
+	  <div class="form-row">
+			  
+        <div class="col-4 mb-3">
+          <label for="itemID">Item ID</label>
+          <input type="text" class="form-control" id="itemID" name="itemID" placeholder="000000">
+        </div>
+		  
+		<div class="col-4"></div>
+
+        <div class="col-4 mb-3">
+          <label for="date-of-sale">Date of Sale</label>
+          <input type="text" class="form-control" id="date_of_sale" name="date_of_sale" placeholder="07/10/2019">
+        </div>
+		  
+	  </div>
+
+	  <div class="form-row">
+		  
+		<div class="col-4 mb-3">
+          <label for="sale-value">Sale Value</label>
+          <input type="text" class="form-control" id="sale-value" name="sale-value" placeholder="XXXX.XX">
+        </div>
+			
+		<div class="col-4"></div>
+
+		<div class="col-4 mb-3">
+          <label for="quantity">Quantity</label>
+          <input type="text" class="form-control" id="quantity" name="quantity" placeholder="100">
+        </div>
+		
+		</div>
+		  
+		<div class="form-row">
+
+		<div class="col-4 mb-3">
+          <label for="location">Location</label>
+          <input type="text" class="form-control" id="location" name="location" placeholder="Washington D.C.">
+        </div>
+
+      </div>
+
+  </div>
+
+  <!--Submit Button-->
+
+  <div class="offset-2 p-0">
+
+    <button class="btn mt-3" style="background-color:fuchsia;color:white;" type="submit" name="submitButton"
+      method="POST" action="/api/saleInsert">Submit form</button>
+
+    </form>
+
+
+  <div class="spacer"></div>
+    <a href="./salesRecords">View Records</a>
+    <br>
+    <a href="/">Home</a>
+  </div>
+
+  <% include partials/footer %>

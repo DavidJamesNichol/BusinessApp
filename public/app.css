@@ -1,0 +1,57 @@
+.image1{
+  z-index: -1;
+  opacity: .9;
+}
+.contain {
+  object-fit: cover;
+}
+
+.header {
+  text-align: center;
+  color: white;
+}
+
+.link2page{
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px #7e837c;
+}
+
+.height0{
+	height: 5em;
+}
+
+.height1{
+	height: 50px;
+}
+
+.height{
+	height: 10em;
+}
+
+/* .card{
+	height: 250px;
+} */
+
+.home-button {
+  height: 200px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.image {
+  width: 100;
+  height: 100;
+}
+
+.spacer {
+  height: 100px;
+}

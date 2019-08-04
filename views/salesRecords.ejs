@@ -1,0 +1,64 @@
+<% include partials/header %>
+
+<div class="pt-2 col-12" style="background-color:fuchsia;color:white;">
+  <h1 class="text-center">Sales Record Page</h1>
+</div>
+
+<div class="col-8 offset-2 p-0">
+
+  <% query %>
+  <% if(query) { %>
+
+  <table class="table table-hover table-dark col-12">
+
+    <thead>
+      <tr>
+        <th scope="col">Sale ID</th>
+        <th scope="col">Cust F Name</th>
+        <th scope="col">Cust L Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date of Sale</th>
+        <th scope="col">Store Location</th>
+      </tr>
+    </thead>
+
+    <% for(const i in query[0]) { %>
+
+    <tr>
+      <th scope="row"><%= query[0][i].saleID %></th>
+      <td><%= query[0][i].cust_f_name %></td>
+      <td><%= query[0][i].cust_l_name %></td>
+      <td><%= query[0][i].phone %></td>
+      <td><%= query[0][i].email %></td>
+      <td><%= query[0][i].date_of_sale %></td>
+      <td><%= query[0][i].store_location %></td>
+    </tr>
+
+    <% }} %>
+
+  </table>
+
+</div>
+
+ <!--Submit Button-->
+
+<form class="form-inline" method="POST" action="/api/salesRecords/salesRecords">
+  <button type="submit" class="btn col-4 offset-4" style="background-color:fuchsia;color:white;" method="POST"
+    action="/api/salesRecords/salesRecords" name="getSalesRecords">Sales by Date</button>
+</form>
+
+<div class="offset-2 col-8 p-0">
+
+  <br>
+
+  <div class="spacer"></div>
+
+  <br>
+  <a href="/salesInsert">Return to Insert</a>
+  <br>
+  <a href="/">Home</a>
+
+</div>
+
+<% include partials/footer %>
