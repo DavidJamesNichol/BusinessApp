@@ -31,7 +31,7 @@ To access the application,
  * click the "Test" button found on the toolbar 
  * press the enter key
  * then click the "Deploy" button
- * finally, visit this url https://david-nichol-app-project.run.goorm.io/
+ * finally, visit this url https://david-nichol-business-app.run.goorm.io/
 
 
 
